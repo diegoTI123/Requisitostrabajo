@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2c3e50;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar button,
+.navbar input {
+  margin-right: 10px;
+}
+
+.carrito {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+#carrito_image {
+  position: relative;
+  text-align: center;
+}
+
+#carrito_image img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.details {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.botonav {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0 40px 0;
+}
+
+.games button {
+  padding: 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.carrito_compra {
+  background-color: #4b4b4b;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+.carrito_items {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.carrito_item {
+  background-color: #666;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  width: 100px;
+  position: relative;
+}
+
+.carrito_item img {
+  width: 80px;
+  height: 100px;
+}
+
+.carrito_item span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.carrito_item button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.carrito_btn {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.confirm .cancel {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm {
+  background-color: green;
+  color: white;
+}
+
+.cancel {
+  background-color: red;
+  color: white;
+}

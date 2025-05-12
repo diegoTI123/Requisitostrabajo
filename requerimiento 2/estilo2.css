@@ -1,0 +1,82 @@
+/* Incluye todo los elementos y luego se elimina margen y padding para un look mas uniforme */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+/* contenedor principal, uso flex para un mejor diseño */
+.container {
+  display: flex;
+  height: 100vh;
+}
+/* Dek lado izquierdo, va del color gris oscuro a un gris mas claro  */
+/* De este lado es todo el panel izquierdo */
+.izq {
+  width: 50%;
+  background: linear-gradient(to right, #555, #777);
+  color: white;
+  padding: 50px;
+}
+
+.izq .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.izq h2 {
+  margin-bottom: 10px;
+}
+/* De este lado es todo el panel derecho */
+.der {
+  width: 50%;
+  padding: 50px;
+  background-color: white;
+}
+
+.der h2 {
+  margin-bottom: 20px;
+}
+/* Aca va todo el formulario */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+small {
+  font-size: 11px;
+  color: #555; 
+  margin-bottom: 10px;
+}
+ /* Al boton de continuar, el cursor es para que cambiar de forma de apuntar a una mano extendida */
+.continue {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.login_link {
+  margin-top: 20px;
+  font-size: 14px;
+}

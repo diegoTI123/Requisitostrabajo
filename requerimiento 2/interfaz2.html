@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro de Marketplace de Videojuegos</title>
+  <link rel="stylesheet" href="./estilo2.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="izq">
+      <div class="logo">🎮 GameStore</div>
+      <h2>Create your free account</h2>
+      <p>Explore your favorite games and play without restrictions</p>
+    </div>
+
+    <div class="der">
+      <h2>Sign up to GameStore</h2>
+      <form id="register">
+        <label for="email">Username or email address:</label>
+        <input type="email" id="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required />
+        <small>Password must be at least 8 characters and include an uppercase and a number.</small>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" required />
+        <small>Only alphanumeric characters or single hyphens, no leading or trailing hyphens.</small>
+
+        <label for="country">Your Country/Region:</label>
+        <select id="country" required>
+          <option value="">-- Select --</option>
+          <option value="Peru">Peru</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Mexico">Mexico</option>
+        </select>
+        <small>For compliance reasons, we collect your country information to send you updates.</small>
+
+        <button class="continue" type="submit">→ Continue</button>
+      </form>
+
+      <p class="login_link">New to GameStore? <a href="#">Create an account</a></p>
+    </div>
+  </div>
+
+  <script src="./js2.js"></script>
+</body>
+</html>
