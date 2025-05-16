@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - News Management</title>
+  <link rel="stylesheet" href="./estilo22.2.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="bar">
+      <div class="profile">
+        <div class="avatar"></div>
+        <p>Jon Shmoe</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./interfaz22.html">Users</a></li>
+          <li><a href="#">Games</a></li>
+          <li><a href="#" class="active">News</a></li>
+          <li><a href="#">Statistics</a></li>
+        </ul>
+      </nav>
+      <button class="logout">Log out</button>
+    </aside>
+
+    <main class="contenido">
+      <div class="header">
+        <h2>News</h2>
+        <button onclick="showForm()">+ Add</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Photo</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="news_table"></tbody>
+      </table>
+    </main>
+  </div>
+
+  <div class="modal" id="news_modal">
+    <div class="modal-contenido">
+      <h3 id="form_titulo">Add News</h3>
+      <form id="news_form">
+        <input type="hidden" id="news_id" />
+        <label>Title</label>
+        <input type="text" id="news_titulo" required />
+        <label>Description</label>
+        <textarea id="news_descripcion" required></textarea>
+        <button type="submit">Save</button>
+        <button type="button" onclick="closeForm()">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js22.2.js"></script>
+</body>
+</html>

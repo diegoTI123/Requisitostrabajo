@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de administración y usuarios</title>
+  <link rel="stylesheet" href="./estilo22.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="bar">
+      <div class="profile">
+        <div class="avatar"></div>
+        <p>Jon Shmoe</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Users</a></li>
+          <li><a href="#">Games</a></li>
+          <li><a href="./interfaz22.2.html">News</a></li>
+          <li><a href="#">Statistics</a></li>
+        </ul>
+      </nav>
+      <button class="logout">Log out</button>
+    </aside>
+
+    <main class="contenido">
+      <h2>Users</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Photo</th>
+            <th>Nickname</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody id="user_table">
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="./js22.js"></script>
+</body>
+</html>
+
