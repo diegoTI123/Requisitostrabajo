@@ -26,42 +26,42 @@ const games = [
   }
 ];
 
-let currentIndex = 0;
-let cart = [];
+let i = 0;
+let carrito = [];
 
 //elige el juego donde esta el carrito actual
-function updateCarousel() {
+function actualizar_carro() {
   const carousel = document.getElementById("carrito_image");
-  const game = games[currentIndex];
+  const game = games[i];
 
   carousel.innerHTML = `
     <img src="${game.image.replace('1024x1024', '800x800')}" alt="${game.name}" />
-    <button class="details" onclick="addToCart(${game.id})">Details</button>
+    <button class="details" onclick="agregar(${game.id})">Details</button>
   `;
 }
 
 //busca el juego por su id
-function addToCart(gameId) {
+function agregar(gameId) {
   const game = games.find(g => g.id === gameId);
-  cart.push(game);
-  renderCart();
+  carrito.push(game);
+  carrito_compra();
 }
 
 //elimina juego
-function removeFromCart(index) {
-  cart.splice(index, 1);
-  renderCart();
+function remover(index) {
+  carrito.splice(index, 1);
+  carrito_compra();
 }
 
 //juego al carrito, muestra x para eliminar y nombre
-function renderCart() {
+function carrito_compra() {
   const container = document.getElementById("carrito_items");
   container.innerHTML = "";
-  cart.forEach((item, index) => {
+  carrito.forEach((item, index) => {
     const div = document.createElement("div");
     div.className = "carrito_item";
     div.innerHTML = `
-      <button onclick="removeFromCart(${index})">✖</button>
+      <button onclick="removeFromCarrito(${index})">✖</button>
       <img src="${item.image}" />
       <span>${item.name}</span>
     `;
@@ -71,30 +71,30 @@ function renderCart() {
 
 //busca retroceder o avanzar juegos
 document.getElementById("back").onclick = () => {
-  currentIndex = (currentIndex - 1 + games.length) % games.length;
-  updateCarousel();
+  i = (i - 1 + games.length) % games.length;
+  actualizar_carro();
 };
 
 document.getElementById("next").onclick = () => {
-  currentIndex = (currentIndex + 1) % games.length;
-  updateCarousel();
+  i = (i + 1) % games.length;
+  actualizar_carro();
 };
 
 //btn de confirmar
 document.querySelector(".confirm").onclick = () => {
-  alert("Orden confirmada con " + cart.length + " juego(s).");
-  cart = [];
-  renderCart();
+  alert("Orden confirmada con " + carrito.length + " juego(s).");
+  carrito = [];
+  carrito_compra();
 };
 
 //btn de cancelar
 document.querySelector(".cancel").onclick = () => {
   if (confirm("¿Cancelar la orden?")) {
-    cart = [];
-    renderCart();
+    carrito = [];
+    carrito_compra();
   }
 };
 
 //inicio
-updateCarousel();
-renderCart();
+actualizar_carro();
+carrito_compra();
